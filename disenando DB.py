@@ -35,7 +35,7 @@ CREATE TABLE Stock (
     producto_id INTEGER,
     cantidad INTEGER,
     UNIQUE (sucursal_id, producto_id),
-    FOREIGN KEY (sucursal_id) REFERENCES Sucursal(id),
+    
 );
 
 CREATE TABLE Cliente (
@@ -57,9 +57,7 @@ CREATE TABLE Orden (
     fecha DATE,
      total DECIMAL(10, 2),
      total NUMERIC(10, 2),
-     FOREIGN KEY (cliente_id) REFERENCES Cliente(id),
-     FOREIGN KEY (sucursal_id) REFERENCES Sucursal(id)
-);
+     );
 
 CREATE TABLE Item (
     id INT PRIMARY KEY,
@@ -67,7 +65,6 @@ CREATE TABLE Item (
     producto_id INT,
     cantidad INT,
     monto_venta NUMERIC(10, 2),
-    FOREIGN KEY (orden_id) REFERENCES Orden(id),
-    FOREIGN KEY (producto_id) REFERENCES Producto(id)
+    
 );
     
