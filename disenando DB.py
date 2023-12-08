@@ -29,13 +29,11 @@ CREATE TABLE Stock (
     sucursal_id INT,
     producto_id INT,
     cantidad INT,
-    UNIQUE KEY unique_stock (sucursal_id, producto_id),
-    id INTEGER PRIMARY KEY,
+        id INTEGER PRIMARY KEY,
     sucursal_id INTEGER,
     producto_id INTEGER,
     cantidad INTEGER,
-    UNIQUE (sucursal_id, producto_id),
-    
+     
 );
 
 CREATE TABLE Cliente (
